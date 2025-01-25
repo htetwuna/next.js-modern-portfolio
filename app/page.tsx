@@ -36,7 +36,7 @@ export default function Home() {
           <motion.div
           initial={{opacity:0, x:100}}
           animate={{opacity:1, x:0}}
-          transition={{duration: 0.8}}
+          transition={{duration:0.8}}
           className="space-y-1"
           >
             <h1 className="text-4xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Htet Wunna Aung</h1>
@@ -49,7 +49,7 @@ export default function Home() {
           transition={{duration: 0.8}}
           className="space-y-3"
           >
-            <h2 className="text-lg font-semibold">Don't just build websites. Build websites that build your business</h2>
+            <h2 className="text-lg font-semibold">Do not just build websites. Build websites that build your business</h2>
             <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Expert in Web & Mobile development with{" "}
               <span className="text-black dark:text-white">PHP</span> and {" "}
               <span className="text-black dark:text-white">Next.js</span>. I specialize in designing and implementing UI systems. With deep expertise in{" "}
