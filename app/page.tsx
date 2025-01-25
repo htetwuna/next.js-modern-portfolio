@@ -1,101 +1,229 @@
+'use client'
 import Image from "next/image";
+import pp from "../photos/new.jpg"
+import ThemeToggle from "@/components/ui/theme-toggle";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Card, CardContent } from "@/components/ui/card";
+import { FaFacebook, FaGithub, FaLinkedinIn, FaYoutube, FaTiktok } from "react-icons/fa";
+import image1 from "../photos/app1.png"
+import image2 from "../photos/app2.png"
+import image3 from "../photos/web1.png"
+import image4 from "../photos/web2.png"
+import image5 from "../photos/web3.png"
+import image6 from "../photos/web4.png"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-color duration-300">
+      <div className="mx-auto max-w-xl px-4 py-20">
+        
+        <motion.header
+        initial={{opacity:0, x:-100}}
+        animate={{opacity:1, x:0}}
+        transition={{duration: 0.8}}
+        
+         className="flex items-center justify-between mb-12">
+          <div className="w-20 h-20 rounded-full overflow-hidden">
+            <Image src={pp} alt="profile picture" className="cursor-pointer transition-all duration-300 hover:scale-110"></Image>
+          </div>
+          <ThemeToggle />
+        </motion.header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <main className="space-y-10">
+          <section className="space-y-10">
+          <motion.div
+          initial={{opacity:0, x:100}}
+          animate={{opacity:1, x:0}}
+          transition={{duration: 0.8}}
+          className="space-y-1"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Htet Wunna Aung</h1>
+            <p className="text-gray-600 dark:text-gray-400">Junior Mobile & Web Developer</p>
+            <p className="text-gray-600 dark:text-gray-400">Yangon, Myanmar</p>
+          </motion.div>
+          <motion.div
+          initial={{opacity:0, x:-100}}
+          animate={{opacity:1, x:0}}
+          transition={{duration: 0.8}}
+          className="space-y-3"
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            <h2 className="text-lg font-semibold">Don't just build websites. Build websites that build your business</h2>
+            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">Expert in Web & Mobile development with{" "}
+              <span className="text-black dark:text-white">PHP</span> and {" "}
+              <span className="text-black dark:text-white">Next.js</span>. I specialize in designing and implementing UI systems. With deep expertise in{" "}
+              <span className="text-black dark:text-white">React, Native, Next.js and PHP, Laravel</span>
+              .
+            </p>
+            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">
+              Beyond Technical skills, In passionate about debugging code and finding solutions to technical challenges.Collaborating effectively with designers, developers, and project managers. Using Git for version control and GitHub for collaboration. Basic of working with MySQL and NoSQL(MongoDB).
+            </p>
+          </motion.div>
+          <motion.div
+          initial={{opacity:0, x:50}}
+          animate={{opacity:1, x:0}}
+          transition={{duration: 0.8}}
+          className="flex items-center gap-3"
+          >
+            <Button className="rounded-full bg-gradient-to-r from-rose-600 to-indigo-600 text-white transition-transform hover:scale-105">Resume</Button>
+
+            <Link href="http://github.com/htetwuna" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <FaGithub />
+            </Link>
+            <Link href="#" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <FaLinkedinIn />
+            </Link>
+            <Link href="https://www.facebook.com/share/154qprvnXx/" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <FaFacebook />
+            </Link>
+            <Link href="https://www.youtube.com/@HtetetWanaAung" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <FaYoutube />
+            </Link>
+            <Link href="https://www.tiktok.com/@lanz20037" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+            <FaTiktok />
+            </Link>
+          </motion.div>
+          </section>
+          
+          <motion.section
+          initial={{opacity:0, y:100}}
+          animate={{opacity:1, y:0}}
+          transition={{duration: 0.8}}
+          className="space-y-8"
+          >
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Experience</h2>
+
+            <div className="space-y-2">
+              <div className="items-center justify-between">
+                <div className="space-y-1">
+                  <p className="text-gray-600 text-sm dark:text-gray-400">2022 - 2024</p>
+                  <p className="font-medium">Junior Technician</p>
+                  <p className="text-blue-600 dark:text-blue-400">Mr.Guard Company</p>
+                </div>
+                <p className="text-gray-600 text-sm dark:text-gray-400">My work as a junior technician involves supporting the setup, maintenance, and troubleshooting of IT systems and solutions. Diagnosing and resolving hardware or software issues. Installing and configuring computer systems, peripherals, and networking equipment. Repairing or replacing hardware components, such as hard drives, RAM, or monitors.Setting up and maintaining local area networks (LANs), wide area networks (WANs), and Wi-Fi systems.</p>
+              </div>
+            </div>
+          </motion.section>
+          <motion.section
+          initial={{opacity:0, y:100}}
+          animate={{opacity:1, y:0}}
+          transition={{duration: 0.8}}
+          className="space-y-8"
+          >
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Education</h2>
+            <div className="space-y-2">
+              <div className="items-center justify-between">
+                <div className="space-y-1">
+                  <p className="text-gray-600 text-sm dark:text-gray-400">January, 2024 - present</p>
+                  <p className="font-medium">Web & Mobile Developer</p>
+                  <p className="text-blue-600 dark:text-blue-400">Fairway Technology</p>
+                </div>
+              </div>
+              <p className="text-gray-600 text-sm dark:text-gray-400">Completed comprehensive training in software development through Fairway Technology, including foundational skills in the Basic Programming Course, advanced expertise in the Professional Programming Course, and mastery in the Rockstar Developer Course. This solid educational foundation reflects a strong commitment to excellence and continuous growth in the field of programming and web development.</p>
+            </div>
+            <div className="space-y-2">
+              <div className="items-center justify-between">
+                <div className="space-y-1">
+                  <p className="text-gray-600 text-sm dark:text-gray-400">2023 - present</p>
+                  <p className="font-medium">English Major</p>
+                  <p className="text-blue-600 dark:text-blue-400">East Yangon University</p>
+                </div>
+              </div>
+              <p className="text-gray-600 text-sm dark:text-gray-400">Typically study a wide range of topics related to the English language, literature, linguistics, and communication.</p>
+            </div>
+          </motion.section>
+          <motion.section
+          initial={{opacity:0, y:100}}
+          animate={{opacity:1, y:0}}
+          transition={{duration: 0.8}}
+          className="space-y-8"
+          >
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-4">
+                  <Image src={image1} alt="Project 1" className="rounded-lg mb-4" />
+
+                  <div>
+                    <div>
+                      <h3 className="font-medium">Project 1</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Next.js & Shadcn: Movie Diretory App </p>
+                    </div>
+                    <Button variant="ghost" size="icon">More</Button>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-4">
+                  <Image src={image2} alt="Project 2" className="rounded-lg mb-4" />
+
+                  <div>
+                    <div>
+                      <h3 className="font-medium">Project 2</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">React Native: Mobile Banking App UI </p>
+                    </div>
+                    <Button variant="ghost" size="icon">More</Button>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-4">
+                  <Image src={image3} alt="Project 3" className="rounded-lg mb-4" />
+
+                  <div>
+                    <div>
+                      <h3 className="font-medium">Project 3</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Pure CSS & JS: Portfolio Website</p>
+                    </div>
+                    <Button variant="ghost" size="icon">More</Button>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-4">
+                  <Image src={image4} alt="Project 4" className="rounded-lg mb-4" />
+
+                  <div>
+                    <div>
+                      <h3 className="font-medium">Project 4</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">HTML & CSS: Edu Web UI</p>
+                    </div>
+                    <Button variant="ghost" size="icon">More</Button>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-4">
+                  <Image src={image5} alt="Project 5" className="rounded-lg mb-4" />
+
+                  <div>
+                    <div>
+                      <h3 className="font-medium">Project 5</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Laravel Framework: Mini Social Media Website </p>
+                    </div>
+                    <Button variant="ghost" size="icon">More</Button>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <CardContent className="p-4">
+                  <Image src={image6} alt="Project 6" className="rounded-lg mb-4" />
+
+                  <div>
+                    <div>
+                      <h3 className="font-medium">Project 6</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">PHP: User Authorization Dashboard</p>
+                    </div>
+                    <Button variant="ghost" size="icon">More</Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            <p className="text-gray-500">© 2024 Htet Wunna Aung</p>
+          </motion.section>
+        </main>
+      </div>
     </div>
   );
 }
